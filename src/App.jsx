@@ -1,11 +1,13 @@
 // app.js
-import React from 'react';
+import React, {useState} from 'react';
 import {Outlet} from 'react-router-dom';
+import Menu from './Components/Menu';
 
 const App = () => {
+  const [Logged] = useState(true);
   return (
     <div className='App'>
-      <h1> NavBar </h1>
+      <Menu Logged={Logged} />
       <Outlet />
       <h1> Footer </h1>
     </div>
